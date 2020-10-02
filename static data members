@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+ 
+class simple
+{
+    static float p;
+    static float r;
+    static float t;
+    static float si;
+    static float amount;
+ 
+ public:
+    static void read ( )
+       {
+            cout <<" Enter Principle Amount :: ";
+            cin>>p ;
+            cout<<"\n Enter Rate of Interest :: ";
+            cin>>r;
+            cout <<"\n Enter Number of years :: ";
+            cin>>t;
+            si= (p *r*t) /100;
+            amount = si + p;
+ 
+       }
+ 
+   static void show( )
+       {
+            cout<<"\n Entered Details are :: \n";
+            cout<<"\n Principle Amount: "<<p;
+            cout <<"\n\n Rate of Interest: "<<r;
+            cout <<"\n\n Number of years: "<<t;
+            cout <<"\n\n Interest : "<<si;
+            cout <<"\n\n Total Amount : "<<amount<<"\n";
+       }
+};
+float simple::p;
+float simple::r;
+float simple::t;
+float simple::si;
+float simple::amount; 
+ 
+int main ()
+{
+    simple::read ( );
+    simple::show ( ); 
+    return 0;
+}
